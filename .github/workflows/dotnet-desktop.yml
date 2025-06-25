@@ -24,10 +24,10 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore \RepoITS\ConsoleApptest\ConsoleApptest.sln
+      run: dotnet restore ConsoleApptest\ConsoleApptest.sln
 
     - name: Build solution
-      run: dotnet build \RepoITS\ConsoleApptest\ConsoleApptest.sln --configuration ${{ matrix.configuration }} --no-restore
+      run: dotnet build ConsoleApptest\ConsoleApptest.sln --configuration ${{ matrix.configuration }} --no-restore
 
     - name: Run tests
-      run: dotnet test \RepoITS\ConsoleApptest\ConsoleApptest.sln --configuration ${{ matrix.configuration }} --no-build
+      run: dotnet test ConsoleApptest\ConsoleApptest.sln --configuration ${{ matrix.configuration }} --no-build
