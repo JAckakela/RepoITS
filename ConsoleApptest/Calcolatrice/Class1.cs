@@ -12,7 +12,7 @@ namespace Calcolatrice
 
         public double Somma(double x, double y)
         {
-            return x + y;
+            return x - y;
             throw new NotImplementedException("La funzione Somma non è ancora implementata.");
         }
     }
